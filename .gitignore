@@ -3,3 +3,5 @@ __pycache__
 .learn
 src/nan_records.csv
 src/metadata_cleaned.csv
+src/metadata_processed_ntk.csv
+src/metadata_processed.csv
