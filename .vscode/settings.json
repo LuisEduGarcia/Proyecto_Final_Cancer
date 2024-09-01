@@ -4,3 +4,6 @@
         "*.md": "vscode.markdown.preview.editor"
     }
 }
+"python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+}
