@@ -5,3 +5,14 @@ src/nan_records.csv
 src/metadata_cleaned.csv
 src/metadata_processed_ntk.csv
 src/metadata_processed.csv
+data/2016-2024/image/
+data/image/
+data/jpeg/
+data/processed/df_test_processed.csv
+data/processed/df_train_processed.csv
+data/raw/ISIC_2024_Challenge_SelfClean_Near_Duplicates.csv
+data/raw/ISIC_2024_Challenge_SelfClean_Scores.csv
+data/raw/sample_submission.csv
+data/raw/test-metadata.csv
+data/raw/train-metadata.csv
+src/submission.csv
