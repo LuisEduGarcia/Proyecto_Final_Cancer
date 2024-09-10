@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipado de Modelo Predictivo Cancer de Piel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_upload.css') }}">
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('uploadedImage');
+                output.src = reader.result;
+                output.style.display = 'block'; // Mostrar la imagen cargada
+            };
+            reader.readAsDataURL(event.target.files[0]);
+
+            // Asignar el archivo seleccionado al input del formulario oculto
+            document.getElementById('imageInput').files = event.target.files;
+        }
+    </script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='imagenes/4Geeks-Academy-logo.png') }}" alt="Logo 1" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/Kaggle_logo.png') }}" alt="Logo 2" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/MicrosoftTeams-image-1-e1678727054972.png') }}" alt="Logo 3" class="logo">
+    </div>
+    
+    <div class="container">
+        <h2>Sube tu imagen para el análisis</h2>
+        <p>Selecciona una imagen de tu dispositivo para realizar el análisis predictivo.</p>
+
+        <!-- Formulario para subir imagen -->
+        <form id="uploadForm" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+            <!-- Campo de selección de archivo -->
+            <input type="file" id="imageInput" name="image" accept="image/*" onchange="previewImage(event)" required>
+            
+            <!-- Previsualización de la imagen seleccionada -->
+            <img id="uploadedImage" alt="Imagen seleccionada" style="display:none; max-width: 100%; height: auto; margin-top: 10px;">
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" style="margin-top: 10px;">Subir y analizar</button>
+        </form>
+    </div>
+</body>
+</html>

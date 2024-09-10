@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipado de Modelo Predictivo Cancer de Piel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="split left">
+            <div class="logo-container">
+                <!-- Aquí puedes añadir los logos y los enlaces a los perfiles -->
+                <img src="{{ url_for('static', filename='imagenes/4Geeks-Academy-logo.png') }}" alt="Logo 1" class="logo">
+                <img src="{{ url_for('static', filename='imagenes/Kaggle_logo.png') }}" alt="Logo 2" class="logo">
+                <img src="{{ url_for('static', filename='imagenes/MicrosoftTeams-image-1-e1678727054972.png') }}" alt="Logo 3" class="logo">
+            </div>
+            <h2>Desarrolladores</h2>
+            <div class="links">
+                <div class="developer">
+                    <img src="{{ url_for('static', filename='imagenes/joan.jpg') }}" alt="Joan Alcaraz Rego" class="profile-pic">
+                    <p><a href="https://www.linkedin.com/in/joan-alcaraz-rego-278a23130/">Joan Alcaráz Rego</a></p>
+                </div>
+                <div class="developer">
+                    <img src="{{ url_for('static', filename='imagenes/luis.jpg') }}" alt="Luis Eduardo García Blanco" class="profile-pic">
+                    <p><a href="https://www.linkedin.com/in/luis-eduardo-garcia-blanco-148662197/">Luis Eduardo García Blanco</a></p>
+                </div>
+                <!--<div class="developer">
+                    <img src="{{ url_for('static', filename='imagenes/jorge.jpg') }}" alt="Jorge Álvarez García" class="profile-pic">
+                    <p><a href="https://github.com/Xingha0">Jorge Álvarez García</a></p>
+                </div>-->
+            </div>
+        </div>
+        <div class="split right">
+            <h2>CONDICIONES DE USO</h2>
+            <div class="disclaimer-container">
+                <div class="disclaimer">
+                    <p><strong>DESCARGO DE RESPONSABILIDAD:</strong></p>
+                    <p>
+                        Los resultados proporcionados por este modelo de detección temprana de cáncer de piel basado en imágenes son meramente informativos y no deben ser considerados como un diagnóstico médico.
+                    </p>
+                    <p>
+                        El modelo no ha sido evaluado ni aprobado por ningún colegio de médicos u organismo regulador. Por lo tanto, cualquier interpretación de los resultados es bajo su propia responsabilidad.
+                    </p>
+                    <p>
+                        <strong>SI CREE QUE PUEDE TENER UNA EMERGENCIA MÉDICA, LLAME A SU MÉDICO O AL NÚMERO DE SERVICIOS DE EMERGENCIA INMEDIATAMENTE.</strong>
+                    </p>
+                    <p>
+                        Este sitio no recomienda ni aprueba ninguna prueba, producto, procedimiento, opinión u otra información que pueda ser mencionada. La confianza en cualquier contenido del sitio es exclusivamente bajo su propia responsabilidad.
+                    </p>
+                    <p>
+                        El contenido de este sitio web tiene como objetivo brindar información útil al público en general.
+                    </p>
+                    <p>
+                        Todos los materiales, incluidos textos, gráficos, imágenes y audio, del Sitio tienen fines informativos únicamente y no sustituyen el diagnóstico, el asesoramiento o el tratamiento médico de afecciones médicas específicas. Todos los visitantes del Sitio deben buscar atención médica especializada y consultar a sus propios médicos para cualquier problema de salud específico.
+                    </p>
+                    <p>
+                        El desarrollo del modelo y su aplicación en este Sitio no implica ninguna responsabilidad por parte del equipo de desarrollo o cualquier afiliado. Para más información sobre las políticas de uso de los datos utilizados en el desarrollo de nuestros modelos de predicción, visite la web ("<a href="https://www.isic-archive.com/" target="_blank">https://www.isic-archive.com/</a>").
+                    </p>
+                    <p>
+                        El aceptar nuestras condiciones asegura que los usuarios son conscientes de que los resultados proporcionados son solo para fines informativos y no deben ser considerados como un consejo médico definitivo.
+                    </p>
+                </div>
+                <div class="actions">
+                    <input type="checkbox" id="acceptConditions" disabled>
+                    <label for="acceptConditions">Acepto las condiciones</label>
+                    <button id="continueButton" disabled onclick="window.location.href='{{ url_for('upload') }}'">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const disclaimer = document.querySelector('.disclaimer');
+            const acceptCheckbox = document.getElementById('acceptConditions');
+            const continueButton = document.getElementById('continueButton');
+
+            function checkIfScrolledToBottom() {
+                // Ajuste de precisión para permitir una pequeña tolerancia al final del scroll
+                const scrollThreshold = disclaimer.scrollHeight - disclaimer.clientHeight;
+                const scrollPosition = disclaimer.scrollTop;
+                // Si el usuario ha hecho scroll hasta la parte inferior del contenido
+                return scrollPosition >= (scrollThreshold - 5);
+            }
+
+            disclaimer.addEventListener('scroll', function() {
+                acceptCheckbox.disabled = !checkIfScrolledToBottom();// Habilitar el checkbox solo si se ha llegado al final del texto
+            });
+
+            acceptCheckbox.addEventListener('change', function() {
+                continueButton.disabled = !acceptCheckbox.checked;  // Habilitar el botón "Continuar" solo si el checkbox está marcado
+            });
+        });
+    </script>
+</body>
+</html>

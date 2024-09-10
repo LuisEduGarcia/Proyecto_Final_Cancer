@@ -2,6 +2,13 @@
     "workbench.startupEditor": "readme",
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
+<<<<<<< HEAD
     },
     "git.ignoreLimitWarning": true
+=======
+    }
+}
+"python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+>>>>>>> Luis
 }

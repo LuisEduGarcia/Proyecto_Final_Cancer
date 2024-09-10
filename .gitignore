@@ -3,6 +3,7 @@ __pycache__
 .learn
 src/nan_records.csv
 src/metadata_cleaned.csv
+<<<<<<< HEAD
 src/metadata_processed_ntk.csv
 src/metadata_processed.csv
 data/2016-2024/image/
@@ -24,3 +25,20 @@ src/prueba_16_20/resnet50_fine_tuned_model_60.h5
 src/prueba_16_20/resnet50_fine_tuned_model.h5
 src/ensamblado_de_modelos/model/ensemble_model.pkl
 src/prueba_16_20/skin_cancer_model.h5
+=======
+src/metadata_processed.csv
+src/metadata_processed_ntk.csv
+src/prueba_16_20/resnet50_fine_tuned_model.h5
+src/prueba_16_20/skin_cancer_model.h5
+src/prueba_16_20/src/prueba_16_20/skin_cancer_model.h5
+src/prueba_16_20/resnet50_fine_tuned_model_40.h5
+src/prueba_16_20/resnet50_fine_tuned_model_60.h5
+models/modelo_prueba.h5
+src/ensamblado_de_modelos/model/ensemble_model.pkl
+src/ensamblado_de_modelos/model/metadata_model.pkl
+src/ensamblado_de_modelos/model/resnet50_fine_tuned_model_20.h5
+src/prueba_16_20/resnet50_fine_tuned_model_20.h5
+>>>>>>> Luis
+Flask_proyecto_cancer_modelo_encadenado/static/data/dataset_flask.csv
+Flask_proyecto_cancer_modelo_encadenado/static/data/nuevo_dataset_con_predicciones_2024.csv
+Flask_proyecto_cancer_modelo_encadenado/static/data/nuevo_dataset_con_predicciones.csv
