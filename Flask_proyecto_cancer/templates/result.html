@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Predicción</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_upload.css') }}">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='imagenes/4Geeks-Academy-logo.png') }}" alt="Logo 1" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/Kaggle_logo.png') }}" alt="Logo 2" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/MicrosoftTeams-image-1-e1678727054972.png') }}" alt="Logo 3" class="logo">
+    </div>
+    
+    <div class="container">
+        <div class="result">
+            <h1>Resultado de la Predicción</h1>
+            <div class="image-container">
+                <img src="{{ image_url }}" alt="Imagen de Prueba" class="uploaded-image">
+            </div>
+            <p>{{ result_message }}</p>
+            <div class="button-container">
+                <a href="{{ url_for('upload') }}" class="button">Analizar otra imagen</a>
+                <a href="{{ url_for('home') }}" class="button">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

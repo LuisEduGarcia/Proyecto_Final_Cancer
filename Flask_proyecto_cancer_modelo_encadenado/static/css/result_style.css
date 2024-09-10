@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #005b96); /* Degradado de blanco a #005b96 */
+    /*height: 135vh;*/
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo {
+    max-height: 80px; /* Ajusta la altura máxima de los logos */
+    margin: 0 10px; /* Espacio entre los logos */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Esto permite que el contenedor tome todo el espacio disponible */
+    width: 100%; /* Para que ocupe todo el ancho disponible */
+    /*padding: 20px;*/
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 50px; /* Ajusta para dejar espacio para la imagen cargada */
+}
+
+input[type="file"] {
+    display: block;
+    margin: 20px 0;
+    font-size: 1.2em; /* Hacer el botón de selección más grande */
+    padding: 10px;
+}
+
+button {
+    padding: 15px 30px; /* Hacer los botones más grandes */
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#uploadedImage {
+    max-width: 100%;
+    max-height: 256px; /* Limitar la altura de la imagen cargada a 256px */
+    margin-top: 20px;
+    display: none; /* Ocultar por defecto hasta que se cargue una imagen */
+}
+.result {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    max-height: 150px; /* Limitar la altura de la imagen cargada a 256px */
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+a.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #005b96;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a.button:hover {
+    background-color: #004578;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+a.button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #005b96;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.button:hover {
+    background-color: #004578;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #005b96;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Añadir estilos para la información del paciente */
+.patient-info-container {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.patient-info li {
+    margin: 10px 0;
+}
+
+.patient-info h2 {
+    margin-bottom: 15px;
+}
+/* Estilos para la sección de eficacia */
+.efficacy-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.efficacy-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.efficacy-info li {
+    margin: 10px 0;
+}

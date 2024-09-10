@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Predicción</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result_style.css') }}">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='imagenes/4Geeks-Academy-logo.png') }}" alt="Logo 1" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/Kaggle_logo.png') }}" alt="Logo 2" class="logo">
+        <img src="{{ url_for('static', filename='imagenes/MicrosoftTeams-image-1-e1678727054972.png') }}" alt="Logo 3" class="logo">
+    </div>
+    
+    <div class="container">
+        <h1>Resultado de la Predicción</h1>
+        <div class="image-container">
+            <img src="{{ image_url }}" alt="Imagen de Prueba" class="uploaded-image">
+        </div>
+        <p><strong>Nombre del archivo:</strong> {{ filename }}</p>
+        <p><strong>Resultado de la Predicción:</strong> {{ result_message }}</p>
+
+        <!-- Mostrar la eficacia del modelo de imágenes -->
+        <div class="efficacy-container">
+            
+            <ul class="efficacy-info">
+                <li><strong>Grado de confianza del modelo en esta predicción:</strong> {{ image_confidence }}%</li>
+            </ul>
+        </div>
+
+        <!-- Información del paciente (si existe) -->
+        {% if patient_info %}
+        <div class="patient-info-container">
+            <h2>Información del Paciente</h2>
+            <ul class="patient-info">
+                <li><strong>Edad aproximada:</strong> {{ patient_info[0]['age_approx'] }} años</li>
+                <li><strong>Cantidad de lesiones:</strong> {{ patient_info[0]['count_per_patient'] }}</li>
+                <li><strong>Diámetro de la lesión:</strong> {{ patient_info[0]['clin_size_long_diam_mm'] }} mm</li>
+                <li><strong>Índice de asimetría del color:</strong> {{ patient_info[0]['color_asymmetry_index'] }}</li>
+            </ul>
+        </div>
+        {% else %}
+        <p>No se encontró información adicional del paciente.</p>
+        {% endif %}
+
+        <div class="button-container">
+            <a href="{{ url_for('upload') }}" class="button">Analizar otra imagen</a>
+            <a href="{{ url_for('home') }}" class="button">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

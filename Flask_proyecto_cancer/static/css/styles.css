@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sección izquierda */
+.split.left {
+    background: linear-gradient(to bottom, #ffffff, #005b96); /* Degradado de blanco a #005b96 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    padding: 20px;
+    box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección derecha */
+.split.right {
+    background: linear-gradient(to bottom, #ffffff, #005b96); /* Degradado de blanco a #005b96 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    color: rgb(2, 2, 2);
+    padding: 20px;
+    box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1);
+}
+.logo-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye los logos horizontalmente */
+    align-items: flex-start; /* Alinea los logos en la parte superior */
+    margin-bottom: 20px;
+}
+
+.logo-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.logo {
+    max-height: 80px; /* Ajusta la altura máxima de los logos */
+    margin: 0 10px; /* Espacio entre los logos */
+}
+/* Título de desarrolladores 
+.links p {
+    margin: 10px 0;
+}*/
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.developer-info {
+    text-align: center;
+    margin-top: auto; /* Empuja el contenido hacia la parte inferior */
+}
+
+.developer-info h2 {
+    margin-bottom: 20px;
+}
+
+.developer-info p {
+    margin: 10px 0;
+}
+/* Centrar los links de desarrolladores */
+.links {
+    text-align: center;
+}
+
+.disclaimer-container {
+    width: 80%; /* Ajusta el tamaño del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding-top: 20px; /* Espacio superior */
+}
+
+/* Título de condiciones */
+.disclaimer-wrapper h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.disclaimer {
+    height: 15em; /* Aproximadamente 15 líneas de texto */
+    overflow-y: auto; /* Permite el scroll vertical si el texto es largo */
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espacio interno para que el texto no quede pegado a los bordes */
+    border-radius: 8px; /* Bordes redondeados para una mejor apariencia */
+    color: black; /* Texto en color negro */
+    font-size: 1em; /* Tamaño de fuente estándar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto flotante */
+}
+
+/* Centrar y dar estilo a la casilla de verificación */
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+.actions label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+.actions button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.actions input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea el checkbox verticalmente con el texto */
+}
+
+
+#acceptButton, #continueButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#acceptButton {
+    background-color: green;
+}
+
+#continueButton {
+    background-color: rgb(90, 90, 236);
+    margin-left: 10px;
+    cursor: not-allowed; /* Desactiva el cursor hasta que el botón esté habilitado */
+}
+
+#acceptButton:enabled {
+    cursor: pointer;
+}
+
+#continueButton:enabled {
+    cursor: pointer;
+}
+
+/* Botón de Continuar - deshabilitado (disabled) */
+button:disabled {
+    background-color: #cccccc; /* Color gris para indicar que está deshabilitado */
+    color: #666666; /* Color de texto más claro */
+    cursor: not-allowed; /* Icono del cursor para indicar que no se puede interactuar */
+}
+
+/* Botón de Continuar - habilitado */
+button {
+    background-color: #005b96; /* Color azul cuando está habilitado */
+    color: white; /* Color del texto cuando está habilitado */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover cuando el botón está habilitado */
+button:hover:enabled {
+    background-color: #003f6d; /* Oscurecer el color de fondo al pasar el mouse */
+}
+
+/* Checkbox y label para "Acepto las condiciones" */
+input[type="checkbox"]:disabled + label {
+    color: #666666; /* Color de texto más claro para indicar que está deshabilitado */
+    cursor: not-allowed; /* Icono del cursor para indicar que no se puede interactuar */
+}
+
+input[type="checkbox"]:enabled + label {
+    color: white; /* Color normal del texto cuando está habilitado */
+    cursor: pointer; /* Cambia el cursor a mano cuando está habilitado */
+}
