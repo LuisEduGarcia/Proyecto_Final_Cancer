@@ -4,7 +4,7 @@ Este es un proyecto basado en el desafío presentado en: https://www.kaggle.com/
 
 ## Estructura
 
-The project is organized as follows:
+El proyecto está organizado de la siguiente manera:
 - `src/` - Este directorio contiene todos los notebooks utilizados.
 - `models/` -  Este directorio contiene los modelos entrenados.
 - `data/` - Este directorio contiene los siguientes subdirectorios:
