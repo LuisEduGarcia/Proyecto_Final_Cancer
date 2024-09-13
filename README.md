@@ -5,11 +5,7 @@ This is a project based on the challenge issued in : https://www.kaggle.com/comp
 ## Structure
 
 The project is organized as follows:
-
-- `app.py` - The main Python script that you run for your project.
-- `explore.py` - A notebook to explore data, play around, visualize, clean, etc. Ideally the notebook code should be migrated to the app.py when moving to production.
-- `utils.py` - This file contains utility code for operations like database connections.
-- `requirements.txt` - This file contains the list of necessary python packages.
+- `src/` - This directory contains all the notebooks that have been used.
 - `models/` - This directory should contain your SQLAlchemy model classes.
 - `data/` - This directory contains the following subdirectories:
   - `interin/` - For intermediate data that has been transformed.
